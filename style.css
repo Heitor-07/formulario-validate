@@ -1,0 +1,173 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    margin: 10px auto;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: -1px -1px 25px #c0c0c0;
+    width: 30%;
+    height: 550px;
+    padding: 15px 10px;
+    margin-top: 10px;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form input {
+    height: 35px;
+    padding: 0 5px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form label {
+    margin: 2px;
+}
+
+.botao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.botao button {
+    width: 50%;
+    height: 35px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.botao button:hover {
+    background-color: #cccccc9a
+}
+
+.mostraSenha {
+    display: flex;
+    align-items: center;
+}
+
+.mostraSenha input {
+    width: 15px;
+    margin-right: 2px;
+}
+
+.mostraSenha input:focus{
+    outline: none;
+}
+
+.message {
+    display: none;
+    font-size: .8rem;
+    margin-left: 2px;
+    color: #000000b2;
+}
+
+.modal {
+    transition: 0.5s;
+}
+
+.fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 5;
+}
+
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 250px;
+    padding: 15px;
+    background-color: #fff;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.close {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #5dc737;
+    color: #474519;
+}
+
+.modal-header {
+    width: 100%;
+    text-align: right;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body p {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #4dc721;
+}
+
+.accept {
+    width: 130px;
+    height: 130px;
+}
+
+.hideModal {
+    top: -150px;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    .form {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    .form {
+        width: 60%;
+    }
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    <title>Formulário - Validate</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastre-se</h1>
+        <form action="home.html" class="form" method="post">
+            
+            <div>
+                <label for="name">Nome usuário</label>
+                <input type="text" name="name" id="name" class="inputForm" oninput="validarName()">
+                <span class="message">Digite no mínimo 3 caracteres</span>
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" class="inputForm" oninput="validarEmail()">
+                <span class="message">E-mail não válido</span>
+            </div>
+            <div class="senha">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" class="inputForm" oninput="validarSenha()">
+                <span class="message">Senha deve ser igual ou maior que 8</span>
+
+                <p class="mostraSenha"">
+                    <input type="checkbox" class="mostraSenha"> Mostrar senha
+                </p>
+
+            </div>
+            <div>
+                <label for="repetirsenha">Confirmar senha</label>
+                <input type="password" name="repetirsenha" id="repetirsenha" class="inputForm" oninput="validarSenhaRepetida()">
+                <span class="message">As senhas devem ser iguais</span>
+            </div>
+            <div class="botao">
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="fade hide"></div>
+    <div class="modal hideModal">
+        <div class="modal-header">
+            <button class="close">X</button>
+        </div>
+        <div class="modal-body">
+            <img src="accept.jpg" alt="" class="accept">
+
+            <p>Cadastro realizado com sucesso!</p>
+
+        </div>
+    </div>
+    
+</body>
+</html>
